@@ -10,7 +10,7 @@ permissions: {}
 jobs:
   ranges:
     name: dependency ranges (Node ${{ matrix.node }})
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     timeout-minutes: 25
     permissions:
       contents: read
@@ -31,7 +31,7 @@ jobs:
 
   package-candidate:
     name: local model package candidate
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     timeout-minutes: 20
     permissions:
       contents: read
@@ -65,7 +65,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-26.04, macos-latest, windows-latest]
         node: [22, 24, 26]
         model:
           - local/potion-code-16m-v2

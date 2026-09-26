@@ -16,7 +16,7 @@ jobs:
     if: >-
       github.event_name == 'pull_request' &&
       vars.ENABLE_DEPENDENCY_REVIEW == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     permissions:
       contents: read
